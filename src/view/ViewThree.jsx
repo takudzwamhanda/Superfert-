@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 
+import Farmer from '../imgs/Farmer.jpg';
+import Fsg from '../imgs/fSg.png';
 
 const PageThree = () => {
   useEffect(() => {
@@ -49,7 +51,7 @@ const PageThree = () => {
               </p>
            </div>
            <div className="imag">
-                <img src="./src/imgs/Farmer.jpg" alt="Farmers" />
+                <img src={Farmer} alt="Farmers" />
           </div>
        </div>
 
@@ -58,7 +60,7 @@ const PageThree = () => {
       <Footer />
 
       <div className="lastImg">
-         <img src="./src/imgs/fSg.png" alt="" width={90} />
+         <img src={Fsg} alt="" width={90} />
       </div>
 
     </>
