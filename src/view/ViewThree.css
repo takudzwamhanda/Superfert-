@@ -1,0 +1,276 @@
+.hero {
+    background: url(../imgs/wheat.jpg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+}
+
+.glassmorphism {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(82, 175, 73, 0.1);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    padding: 60px 20px;
+}
+
+.content {
+    display: flex;
+    gap: 150px;
+    padding-left: 120px;
+    color: white;
+}
+
+.text1 h2 {
+    font-size: 69px;
+    color: white;
+}
+
+.text1 button {
+  color: black;
+  background-color: #FDF517;   
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 30px;
+  margin-top: 30px;
+}
+
+/*Second Third*/
+
+.body {
+    display: flex;
+    gap: 100px;
+    padding: 90px 160px;
+}
+
+.imag {
+    padding-top: 30px;
+}
+
+/*third section*/ 
+.footer {
+  background-color: #18263A;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.footer  h3{
+  color: white;
+  padding-top: 60px;
+  
+} 
+
+.Links h3 {
+  padding-bottom: 20px;
+}
+
+.footer ul  a{
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.lastImg {
+  background-color: #18263A;
+  padding-left: 80px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .hero {
+    height: auto;
+    min-height: 60vh;
+  }
+  .body {
+    gap: 40px;
+    padding: 40px 20px;
+  }
+  .text1 h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    position: static;
+    margin: 0;
+  }
+  .hero {
+    height: auto;
+    min-height: 40vh;
+    padding: 10px 0;
+  }
+  .glassmorphism {
+    padding: 20px 5px;
+    position: static;
+  }
+  .content {
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    font-size: 14px;
+  }
+  .text1 h2 {
+    font-size: 20px;
+  }
+  .text1 button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  .body {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .imag img {
+    max-width: 100%;
+    height: auto;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+  .footer h3 {
+    padding-top: 20px;
+  }
+  .lastImg {
+    padding-left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Tablet-specific styles */
+@media (min-width: 601px) and (max-width: 800px) {
+  .hero {
+    height: auto;
+    min-height: 50vh;
+  }
+  .glassmorphism {
+    padding: 40px 20px;
+  }
+  .content {
+    gap: 60px;
+    padding-left: 40px;
+  }
+  .text1 h2 {
+    font-size: 42px;
+  }
+  .text1 button {
+    font-size: 16px;
+    padding: 10px 25px;
+    margin-left: 0;
+  }
+  .body {
+    gap: 40px;
+    padding: 60px 40px;
+  }
+  .imag {
+    padding-top: 20px;
+  }
+  .imag img {
+    max-width: 100%;
+    height: auto;
+  }
+  .footer {
+    padding: 20px;
+    gap: 30px;
+  }
+  .footer h3 {
+    padding-top: 40px;
+  }
+  .lastImg {
+    padding-left: 40px;
+  }
+}
+
+/* Hamburger menu styles */
+.navbar {
+  position: relative;
+}
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.hamburger {
+  width: 28px;
+  height: 3px;
+  background: #222;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 800px) {
+  .nav-toggle {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  nav ul, .nav-links {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 80vw;
+    max-width: 320px;
+    background: #EBEBEBE5;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 9;
+    padding: 20px 0;
+    margin: 0;
+    gap: 0;
+    height: auto;
+  }
+  .nav-links.open {
+    display: flex !important;
+  }
+  .nav-links li {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 0;
+  }
+  .nav-link {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 18px;
+    text-align: left;
+    margin: 0;
+  }
+}
+
+
